@@ -1,1 +1,353 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #353535;
+    color: #ffffff;
+}
+header {
+    background-color: #202020;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+nav a:hover {
+    background-color: #555;
+}
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    position: relative; /* added position */
+}
+h2 {
+    color: #202020;
+}
+p {
+    line-height: 1.6;
+}
+footer {
+    margin-top: 200px;
+    background-color: #202020;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 100px;
+}
+/* Animation */
+@keyframes shootWeb {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}
 
+.box{
+    width:200px;
+    height: 200px;
+    background-color:rgb(170, 151, 151);
+    position: relative;
+    top:100px;
+    margin: auto;
+    transform-style: preserve-3d;
+    margin-bottom: 100px;
+    animation: rotation 3s linear 0s infinite ;
+}
+.front{
+    position: absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background:radial-gradient(blue,white);
+    transform: translateZ(100px);
+}
+.back{
+    position: absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background:radial-gradient(blue,white);
+    transform: translateZ(-100px);
+}
+.right{
+    position: absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background:radial-gradient(blue,rgb(255, 255, 255));
+    transform: translateX(-100px) rotateY(90deg);
+}
+.left{
+    position: absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background:radial-gradient(blue,rgb(255, 255, 255));
+    transform: translateX(+100px) rotateY(90deg);
+}
+.top{
+    position: absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background:radial-gradient(blue,rgb(255, 255, 255));
+    transform: translateY(+100px) rotateX(90deg);
+}
+.bottom{
+    position: absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    background:radial-gradient(blue,rgb(255, 255, 255));
+  
+      transform: translateY(-100px) rotateX(90deg);
+}
+@keyframes rotation {
+    0%{
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+    25%{
+        transform: rotateX(90deg) rotateY(-90deg);
+    }
+    50%{
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    100%{
+        transform: rotateX(45deg) rotateY(45deg);
+    }
+}
+.box1 {
+width: 200px;
+aspect-ratio: 1;
+clip-path: polygon(100% 50%,25% 93.3%,25% 6.7%);
+}
+.fullpage-wrapper{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(#353c44, #222931);
+    display: flex;
+  }
+  .reactor-container{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border: 1px dashed #888;
+    position: relative;
+    border-radius: 50%;
+    background-color: #384c50;
+    border: 1px solid #121414;
+    box-shadow: 0px 0px 32px 8px #121414, 0px 0px 4px 1px #121414 inset;
+  }
+  .reactor-container-inner{
+    height: 238px;
+    width: 238px;
+    background-color: #161a1b;
+    box-shadow: 0px 0px 4px 1px #52fefe;
+  }
+  .circle{
+    border-radius: 50%;
+  }
+  .abs-center{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .core-inner{
+    width: 70px;
+    height: 70px;
+    border: 5px solid #1b4e5f;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 7px 5px #52fefe, 0px 0px 10px 10px #52fefe inset;
+  }
+  .core-outer{
+    width: 120px;
+    height: 120px;
+    border: 1px solid #52fefe;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 2px 1px #52fefe, 0px 0px 10px 5px #52fefe inset;
+  }
+  .core-wrapper{
+    width: 180px;
+    height: 180px;
+    background-color: #073c4b;
+    box-shadow: 0px 0px 5px 4px #52fefe, 0px 0px 6px 2px #52fefe inset;
+  }
+  .tunnel{
+    width: 220px;
+    height: 220px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 1px #52fefe, 0px 0px 5px 4px #52fefe inset;
+  }
+  .coil-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: 3s infinite linear reactor-anim;
+  }
+  .coil{
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: calc(50% - 110px);
+    left: calc(50% - 15px);
+    transform-origin: 15px 110px;
+    background-color: #073c4b;
+    box-shadow: 0px 0px 5px #52fefe inset;
+  }
+  .coil-1{
+    transform: rotate(0deg);
+  }
+  .coil-2{
+    transform: rotate(45deg);
+  }
+  .coil-3{
+    transform: rotate(90deg);
+  }
+  .coil-4{
+    transform: rotate(135deg);
+  }
+  .coil-5{
+    transform: rotate(180deg);
+  }
+  .coil-6{
+    transform: rotate(225deg);
+  }
+  .coil-7{
+    transform: rotate(270deg);
+  }
+  .coil-8{
+    transform: rotate(315deg);
+  }
+  @keyframes reactor-anim{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      background-color: #384c50;
+      text-align: center;
+    }
+    .footer p {
+    text-decoration: none;
+    color: #000;
+    }
+    .footer a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+      color: #073c4b;
+    }
+    .wrap {
+        width: 95%;
+        height: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .stone {
+        width: 10vw;
+        height: 14vw;
+        margin: 0 2%;
+        filter: blur(1px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 50%;
+        box-shadow: inset 0 0 13px 3px #000;
+        transform: translateZ(0);
+        position: relative; /* Added for positioning the shine */
+      }
+    
+      .stone--space {
+        background-color: #101974;
+      }
+    
+      .stone_inner {
+        width: 70%;
+        height: 70%;
+        filter: blur(5px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50px;
+      }
+    
+      .stone_inner--space {
+        background-color: #13B4FF;
+      }
+    
+      .cut {
+        mix-blend-mode: lighten;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    
+      .cut--space {
+        width: 200px;
+        height: 200px;
+        clip-path: polygon(40% 0%, 60% 0%, 100% 100%, 0% 100%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(103, 195, 252, 0.5) 8%, rgba(38, 0, 255, 0.5) 16%, rgba(255, 255, 255, 0.5) 25%, rgba(38, 0, 255, 0.5) 34%, rgba(103, 195, 252, 0.5) 42%, rgba(0, 0, 0, 0.5) 50%);
+      }
+    
+      .shine {
+        position: absolute;
+        width: 10px; /* Adjust size of shines as needed */
+        height: 10px; /* Adjust size of shines as needed */
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        animation: shineEffect 2s infinite;
+      }
+    
+      @keyframes shineEffect {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
